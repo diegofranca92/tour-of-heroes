@@ -1,0 +1,19 @@
+<section *ngIf="hero">
+  <h2>{{ hero.name | uppercase }} Details</h2>
+  <div>
+    <label>Id: </label>
+    <span>{{ hero.id }}</span>
+  </div>
+  <div>
+    <label>Nome: </label>
+    <span>{{ hero.name }}</span>
+  </div>
+  <div>
+    <label>Data de Nastimento: </label>
+    <span>{{ hero.dt_nascimento | date: "dd/MM/yyyy" }}</span>
+  </div>
+  <div>
+    <label>Nome: </label>
+    <input [(ngModel)]="hero.name" placeholder="name" type="text" />
+  </div>
+</section>

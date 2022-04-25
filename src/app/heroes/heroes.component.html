@@ -14,22 +14,4 @@
 
 <hr />
 
-<section *ngIf="selectedHero">
-  <h2>{{ selectedHero.name | uppercase }} Details</h2>
-  <div>
-    <label>Id: </label>
-    <span>{{ selectedHero.id }}</span>
-  </div>
-  <div>
-    <label>Nome: </label>
-    <span>{{ selectedHero.name }}</span>
-  </div>
-  <div>
-    <label>Data de Nastimento: </label>
-    <span>{{ selectedHero.dt_nascimento | date: "dd/MM/yyyy" }}</span>
-  </div>
-  <div>
-    <label>Nome: </label>
-    <input [(ngModel)]="selectedHero.name" placeholder="name" type="text" />
-  </div>
-</section>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
