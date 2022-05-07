@@ -25,8 +25,7 @@ jobs:
   deploy-dev:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    environment:
-      name: dev
+    environment: dev
     needs: build
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -42,8 +41,7 @@ jobs:
   deploy-hlg:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    environment: |
-      name: hlg
+    environment: hlg
     needs: deploy-dev
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -59,8 +57,7 @@ jobs:
   deploy-prod:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    environment: |
-      name: Production
+    environment: Production
     needs: deploy-hlg
 
     # Steps represent a sequence of tasks that will be executed as part of the job
